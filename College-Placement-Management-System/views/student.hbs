@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Placement Management System - Express.js</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>{{student.name}}</h1>
+    <div class="card">
+      <p><strong>ID:</strong> {{student.id}}</p>
+      <p><strong>Course:</strong> {{student.course}}</p>
+      <p><strong>Skills:</strong> {{student.skills}}</p>
+      {{#if student.available}}
+      <p class="available">
+        Available for placement
+      </p>
+      {{else}}
+      <p class="unavailable">
+        Currently unavailable
+      </p>
+      {{/if}}
+    </div>
+    <a href="/students">Back to Students</a>
+  </div>
+</body>
+</html>

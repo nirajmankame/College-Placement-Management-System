@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Placement Management System - Express.js</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>{{company.name}}</h1>
+    <div class="card">
+      <p><strong>ID:</strong> {{company.id}}</p>
+      <p><strong>Location:</strong> {{company.location}}</p>
+      <p><strong>Industry:</strong> {{company.industry}}</p>
+    </div>
+    <h2>Job Openings</h2>
+    {{#if jobs.length}}
+    {{#each jobs}}
+    <div class="card">
+      <h3>{{title}}</h3>
+      <p><strong>Location:</strong> {{location}}</p>
+      <p><strong>Type:</strong> {{type}}</p>
+      <p><strong>Openings:</strong> {{openings}}</p>
+    </div>
+    {{/each}}
+    {{else}}
+    <p>No job openings currently posted by this company.</p>
+    {{/if}}
+    <a href="/jobs/{{company.id}}">View Jobs Page</a><br><br>
+    <a href="/companies">Back to Companies</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Placement Management System - Express.js</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Participating Companies</h1>
+    <a href="/">Home</a>
+    {{#each companies}}
+    <div class="card">
+      <h2>{{name}}</h2>
+      <p><strong>ID:</strong> {{id}}</p>
+      <p><strong>Location:</strong> {{location}}</p>
+      <p><strong>Industry:</strong> {{industry}}</p>
+      <a href="/company/{{id}}">View Company &amp; Jobs</a>
+    </div>
+    {{/each}}
+  </div>
+</body>
+</html>
